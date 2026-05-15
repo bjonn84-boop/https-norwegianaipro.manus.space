@@ -40,9 +40,7 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 
 // Contact form — Formspree
-// 1. Gå til https://formspree.io og opprett et gratis skjema
-// 2. Bytt ut FORMSPREE_FORM_ID nedenfor med din ID (f.eks. xabcdefg)
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/FORMSPREE_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqenrddo';
 
 const form        = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
