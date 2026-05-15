@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NorwegianAI Pro – Vi bygger AI-automatisering for norske småbedrifter. Spar timer hver uke med smarte arbeidsflyter." />
+  <meta property="og:title" content="NorwegianAI Pro – AI-automatisering for norske SMB-er" />
+  <meta property="og:description" content="Vi bygger AI-resepsjonist, tilbudsgenererator og lead-kvalifisering for din bedrift. Norsk leverandør, GDPR-trygt." />
+  <meta property="og:type" content="website" />
+  <title>NorwegianAI Pro – AI-automatisering for norske SMB-er</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span>NorwegianAI<span class="logo-accent">Pro</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#tjenester">Tjenester</a>
+        <a href="#prosess">Prosess</a>
+        <a href="#resultater">Resultater</a>
+        <a href="#priser">Priser</a>
+        <a href="#kontakt" class="btn btn-sm">Gratis konsultasjon</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Åpne meny">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container">
+      <div class="badge">🇳🇴 Norsk leverandør · GDPR-trygt</div>
+      <h1>
+        Din bedrift jobber<br />
+        <span class="gradient-text">24/7 på autopilot</span>
+      </h1>
+      <p class="hero-sub">
+        Vi bygger AI-arbeidsflyter som sparer norske småbedrifter 8–15 timer i uka —
+        fra AI-resepsjonist til automatisk tilbudsgenerering.
+        Levert på norsk, klar på 3–5 dager.
+      </p>
+      <div class="hero-ctas">
+        <a href="#kontakt" class="btn btn-primary btn-lg">
+          Book gratis strategisamtale
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#resultater" class="btn btn-ghost btn-lg">Se resultater</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>8–15 t</strong>
+          <span>spart per uke</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>3–5 dager</strong>
+          <span>til ferdig system</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>norsk kommunikasjon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Bar -->
+  <div class="proof-bar">
+    <div class="container">
+      <span class="proof-label">Brukt av norske bedrifter innen:</span>
+      <div class="proof-tags">
+        <span>🦷 Tannlege</span>
+        <span>⚡ Elektriker</span>
+        <span>🏠 Eiendom</span>
+        <span>⛵ Fjordturisme</span>
+        <span>🔧 Håndverk</span>
+        <span>🛍️ Netthandel</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem Section -->
+  <section class="section problem-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Kjenner du deg igjen?</h2>
+        <p>Disse problemene koster deg tid og penger hver eneste dag</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📞</div>
+          <h3>Tapte henvendelser</h3>
+          <p>Kunder ringer eller sender melding utenfor åpningstid — og velger en konkurrent som svarer raskt.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">📋</div>
+          <h3>Manuell oppfølging</h3>
+          <p>Du bruker timer på å lage tilbud, sende purringer og booke timer — arbeid som kan gå automatisk.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🤦</div>
+          <h3>Dårlige leads</h3>
+          <p>For mye tid brukes på henvendelser som aldri konverterer. AI kvalifiserer dem før de når deg.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">💸</div>
+          <h3>Dyr admin</h3>
+          <p>En resepsjonist eller kundeservicemedarbeider koster 400 000–600 000 kr/år. En AI gjør jobben for under 3 000 kr/mnd.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services-section" id="tjenester">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Tjenester</div>
+        <h2>Hva vi bygger for deg</h2>
+        <p>Skreddersydde AI-løsninger tilpasset din bransje og dine behov</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card service-card--featured">
+          <div class="service-tag">Mest populær</div>
+          <div class="service-icon">🤖</div>
+          <h3>AI-resepsjonist</h3>
+          <p>Svarer på henvendelser, booker timer og sender bekreftelser automatisk — 24/7, på norsk.</p>
+          <ul class="service-features">
+            <li>✅ Besvarer vanlige spørsmål automatisk</li>
+            <li>✅ Booker timer i din kalender</li>
+            <li>✅ Sender SMS- og e-postbekreftelser</li>
+            <li>✅ Eskalerer til deg ved behov</li>
+          </ul>
+          <div class="service-usecase">
+            <strong>Perfekt for:</strong> Tannleger, frisører, bilverksteder, fysioterapeuter
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📄</div>
+          <h3>Automatisk tilbudsgenerering</h3>
+          <p>Kunden fyller inn et skjema — du får et ferdig tilbud i innboksen sekunder senere.</p>
+          <ul class="service-features">
+            <li>✅ Skreddersydd tilbudsmal for din bransje</li>
+            <li>✅ Automatisk prisberegning</li>
+            <li>✅ Sendes til kunde og CRM</li>
+            <li>✅ Oppfølging hvis ikke svar</li>
+          </ul>
+          <div class="service-usecase">
+            <strong>Perfekt for:</strong> Elektrikere, rørleggere, malere, snekkerere
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💬</div>
+          <h3>Lead-kvalifiserende chatbot</h3>
+          <p>Chatter med besøkende på nettsiden din, samler inn info og kvalifiserer leads automatisk.</p>
+          <ul class="service-features">
+            <li>✅ Samtale på norsk og engelsk</li>
+            <li>✅ Samler kontaktinfo og behov</li>
+            <li>✅ Sender varsel til deg om hete leads</li>
+            <li>✅ Integreres med din CRM</li>
+          </ul>
+          <div class="service-usecase">
+            <strong>Perfekt for:</strong> Eiendomsmeglere, forsikring, rådgivere
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📧</div>
+          <h3>E-post- og SMS-automatisering</h3>
+          <p>Automatiske oppfølgingssekvenser som nurturerer leads og bringer tilbake tidligere kunder.</p>
+          <ul class="service-features">
+            <li>✅ Velkomstsekvenser for nye leads</li>
+            <li>✅ Påminnelser om time og fornyelse</li>
+            <li>✅ Tilbakemeldingsskjema etter levering</li>
+            <li>✅ Sesongkampanjer på autopilot</li>
+          </ul>
+          <div class="service-usecase">
+            <strong>Perfekt for:</strong> Alle servicebedrifter
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⛵</div>
+          <h3>Booking & turismeautomatisering</h3>
+          <p>Bookingflyt, betalingsbekreftelse og vær-/kapasitetsbaserte meldinger for opplevelsesnæringen.</p>
+          <ul class="service-features">
+            <li>✅ Automatisk bookingbekreftelse</li>
+            <li>✅ Upsell og tilleggstjenester</li>
+            <li>✅ Anmeldelsesinnhenting etter turen</li>
+            <li>✅ Overbookingshåndtering</li>
+          </ul>
+          <div class="service-usecase">
+            <strong>Perfekt for:</strong> Fjordturisme, hytteformidling, aktivitetsbedrifter
+          </div>
+        </div>
+
+        <div class="service-card service-card--custom">
+          <div class="service-icon">🔧</div>
+          <h3>Skreddersydd løsning</h3>
+          <p>Har du en spesifikk prosess som koster deg tid? Vi analyserer den og bygger en tilpasset automatisering.</p>
+          <ul class="service-features">
+            <li>✅ Gratis prosessanalyse inkludert</li>
+            <li>✅ ROI-beregning før vi starter</li>
+            <li>✅ Integrasjon med eksisterende verktøy</li>
+            <li>✅ Opplæring av deg og teamet</li>
+          </ul>
+          <div class="service-usecase">
+            <strong>Ta kontakt for en uforpliktende prat</strong>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="section process-section" id="prosess">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Prosessen</div>
+        <h2>Fra idé til automatisering på 5 dager</h2>
+        <p>Enkelt, transparent og uten teknisk forvirring</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Gratis strategisamtale</h3>
+            <p>Vi kartlegger hvilke prosesser som koster deg mest tid og penger. Du får en klar ROI-beregning.</p>
+            <span class="step-time">30 min · Gratis</span>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Forslag og pris</h3>
+            <p>Du mottar et detaljert forslag med nøyaktig hva vi bygger, hva det koster og hva du sparer.</p>
+            <span class="step-time">Innen 24 timer</span>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Vi bygger</h3>
+            <p>Vi setter opp hele løsningen, tester grundig og sikrer at alt fungerer med dine eksisterende systemer.</p>
+            <span class="step-time">3–5 virkedager</span>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Levering og opplæring</h3>
+            <p>Vi leverer, forklarer og sikrer at du forstår systemet. Deretter er du selvgående — eller vi tar løpende vedlikehold.</p>
+            <span class="step-time">Inkludert</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results / Case Studies -->
+  <section class="section results-section" id="resultater">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Resultater</div>
+        <h2>Hva kundene oppnår</h2>
+        <p>Konkrete besparelser fra norske bedrifter</p>
+      </div>
+      <div class="cases-grid">
+
+        <div class="case-card">
+          <div class="case-industry">🦷 Tannlegekontor, Oslo</div>
+          <blockquote>
+            "Vi tapte pasienter fordi vi ikke rakk å svare raskt nok på henvendelser.
+            Nå booker AI-resepsjonisten 15–20 nye pasienter i måneden vi ellers ville mistet."
+          </blockquote>
+          <div class="case-metrics">
+            <div class="metric">
+              <strong>12 t</strong>
+              <span>spart per uke</span>
+            </div>
+            <div class="metric">
+              <strong>+23%</strong>
+              <span>nye bookinger</span>
+            </div>
+            <div class="metric">
+              <strong>3 dager</strong>
+              <span>til live</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-industry">⚡ Elektrikerfirma, Bergen</div>
+          <blockquote>
+            "Tilbudsgenereringen vår tok 45 minutter per henvendelse. Nå tar det 0 —
+            systemet sender ferdig tilbud med priser, og vi signerer bare."
+          </blockquote>
+          <div class="case-metrics">
+            <div class="metric">
+              <strong>8 t</strong>
+              <span>spart per uke</span>
+            </div>
+            <div class="metric">
+              <strong>+40%</strong>
+              <span>konverteringsrate</span>
+            </div>
+            <div class="metric">
+              <strong>5 dager</strong>
+              <span>til live</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-industry">🏠 Eiendomsmegler, Stavanger</div>
+          <blockquote>
+            "Chatboten på nettsiden vår kvalifiserer leads døgnet rundt.
+            Jeg slipper å bruke tid på folk som ikke er seriøse kjøpere."
+          </blockquote>
+          <div class="case-metrics">
+            <div class="metric">
+              <strong>15 t</strong>
+              <span>spart per uke</span>
+            </div>
+            <div class="metric">
+              <strong>3× bedre</strong>
+              <span>lead-kvalitet</span>
+            </div>
+            <div class="metric">
+              <strong>4 dager</strong>
+              <span>til live</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section pricing-section" id="priser">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Priser</div>
+        <h2>Investeringen betaler seg tilbake</h2>
+        <p>Transparent prissetting uten skjulte kostnader</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Enkelt bygg</h3>
+            <div class="pricing-amount">
+              <span class="price-from">Fra</span>
+              <span class="price-value">15 000</span>
+              <span class="price-currency">kr</span>
+            </div>
+            <p>Én komplett automatisering</p>
+          </div>
+          <ul class="pricing-features">
+            <li>✅ En skreddersydd arbeidsflyt</li>
+            <li>✅ Integrasjon med dine verktøy</li>
+            <li>✅ Testing og kvalitetssikring</li>
+            <li>✅ Opplæring inkludert</li>
+            <li>✅ 30 dagers support etter levering</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-outline">Kom i gang</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-tag">Mest valgt</div>
+          <div class="pricing-header">
+            <h3>Komplett pakke</h3>
+            <div class="pricing-amount">
+              <span class="price-from">Fra</span>
+              <span class="price-value">35 000</span>
+              <span class="price-currency">kr</span>
+            </div>
+            <p>Fullt automatisert bedrift</p>
+          </div>
+          <ul class="pricing-features">
+            <li>✅ Opptil 3 arbeidsflyter</li>
+            <li>✅ AI-resepsjonist + tilbud + oppfølging</li>
+            <li>✅ CRM-integrasjon</li>
+            <li>✅ Skreddersydd dashboard</li>
+            <li>✅ 60 dagers support etter levering</li>
+            <li>✅ Gratis månedlig gjennomgang</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-primary">Book samtale</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Løpende retainer</h3>
+            <div class="pricing-amount">
+              <span class="price-from">Fra</span>
+              <span class="price-value">3 000</span>
+              <span class="price-currency">kr/mnd</span>
+            </div>
+            <p>Vi håndterer alt løpende</p>
+          </div>
+          <ul class="pricing-features">
+            <li>✅ Vedlikehold og oppdateringer</li>
+            <li>✅ Månedlig optimering</li>
+            <li>✅ Ubegrenset support</li>
+            <li>✅ Nye automatiseringer etter behov</li>
+            <li>✅ Månedlig rapport med tall</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-outline">Lær mer</a>
+        </div>
+
+      </div>
+
+      <div class="roi-calculator">
+        <div class="roi-inner">
+          <h3>🧮 Rask ROI-kalkulator</h3>
+          <p>Hva koster en ansatt å gjøre det samme manuelt?</p>
+          <div class="roi-comparison">
+            <div class="roi-col">
+              <div class="roi-label">Ansatt (deltid, 20t/uke)</div>
+              <div class="roi-value roi-value--bad">~280 000 kr/år</div>
+              <div class="roi-sub">Lønn + arbeidsgiveravgift + ferie</div>
+            </div>
+            <div class="roi-vs">VS</div>
+            <div class="roi-col">
+              <div class="roi-label">AI-automatisering</div>
+              <div class="roi-value roi-value--good">~60 000 kr/år</div>
+              <div class="roi-sub">Engangskost + lav månedskostnad</div>
+            </div>
+          </div>
+          <div class="roi-saving">Du sparer opptil <strong>220 000 kr per år</strong></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Hvorfor velge oss?</h2>
+        <p>Vi er ikke en internasjonal plattform — vi er norsk, lokalt og tilgjengelige</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🇳🇴</div>
+          <h3>100% norsk</h3>
+          <p>Vi kommuniserer på norsk, forstår norsk forretningskultur og hjelper deg med GDPR-kompatible løsninger.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Rask levering</h3>
+          <p>De fleste systemer er live innen 3–5 virkedager. Ikke uker eller måneder som hos store byråer.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎯</div>
+          <h3>ROI-fokusert</h3>
+          <p>Vi bygger bare det som faktisk sparer deg tid og penger. Ingen unødvendige funksjoner.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔒</div>
+          <h3>GDPR-trygt</h3>
+          <p>Alle løsninger bygges med personvern som fundament. Kundenes data behandles i samsvar med norsk lovgivning.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📞</div>
+          <h3>Direkte kontakt</h3>
+          <p>Du snakker alltid med den som faktisk bygger systemet — ikke et callsenter eller et ticketsystem.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔧</div>
+          <h3>Vi fikser det som feiler</h3>
+          <p>Automatisering kan gå galt. Vi er alltid tilgjengelige for å rette opp og sikre at systemet kjører stabilt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact Section -->
+  <section class="section contact-section" id="kontakt">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-left">
+          <div class="section-badge">Kom i gang</div>
+          <h2>Klar for å automatisere?</h2>
+          <p>
+            Book en gratis 30-minutters strategisamtale. Vi ser på bedriften din,
+            finner de største tidsslukerne og forteller deg nøyaktig hva vi kan bygge —
+            helt uforpliktende.
+          </p>
+          <ul class="contact-promises">
+            <li>✅ Ingen salgspresset prat</li>
+            <li>✅ Konkret ROI-analyse</li>
+            <li>✅ Svar på alle spørsmål</li>
+            <li>✅ Gratis — alltid</li>
+          </ul>
+          <div class="contact-reach">
+            <div class="contact-method">
+              <span class="contact-method-icon">📧</span>
+              <a href="mailto:hei@norwegianaipro.no">hei@norwegianaipro.no</a>
+            </div>
+            <div class="contact-method">
+              <span class="contact-method-icon">📱</span>
+              <a href="https://tiktok.com" target="_blank" rel="noopener">Følg oss på TikTok</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Ditt navn</label>
+              <input type="text" id="name" name="name" placeholder="Ola Nordmann" required />
+            </div>
+            <div class="form-group">
+              <label for="business">Bedriftsnavn</label>
+              <input type="text" id="business" name="business" placeholder="Nordmann AS" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-post</label>
+              <input type="email" id="email" name="email" placeholder="ola@nordmann.no" required />
+            </div>
+            <div class="form-group">
+              <label for="industry">Bransje</label>
+              <select id="industry" name="industry" required>
+                <option value="">Velg bransje...</option>
+                <option>Tannlege / helsetjenester</option>
+                <option>Elektriker / VVS / håndverk</option>
+                <option>Eiendom</option>
+                <option>Turisme / opplevelser</option>
+                <option>Frisør / skjønnhet</option>
+                <option>Netthandel</option>
+                <option>Rådgivning / konsulting</option>
+                <option>Annet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="challenge">Hva er din største tidstjuv i dag?</label>
+              <textarea id="challenge" name="challenge" rows="3" placeholder="F.eks. «Svar på henvendelser tar 2 timer daglig»"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Book gratis strategisamtale
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form-disclaimer">Ingen spam. Ingen forpliktelser. Vi svarer innen 24 timer.</p>
+          </form>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <div class="success-icon">✅</div>
+            <h3>Takk for henvendelsen!</h3>
+            <p>Vi tar kontakt innen 24 timer for å avtale et tidspunkt som passer deg.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Vanlige spørsmål</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Trenger jeg teknisk kunnskap for å bruke systemet?
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Nei. Vi lager systemene slik at du kan bruke dem uten teknisk bakgrunn. Du trenger bare å kjenne din egen bedrift. Vi tar oss av alt det tekniske og gir deg en enkel forklaring på hvordan alt fungerer.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Hva skjer hvis noe slutter å fungere?
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Alle pakker inkluderer support i 30–60 dager etter levering. Velger du vår løpende retainer, fikser vi alt innen 4 timer på virkedager. Vi varsler deg alltid proaktivt hvis vi ser noe som ikke stemmer.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Er det GDPR-lovlig å bruke AI på denne måten?
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Ja, hvis det gjøres riktig — og det gjør vi. Vi bruker europeiske datasentre der mulig, hjelper deg med personvernerklæring og behandlingsavtaler, og sikrer at kunder gir informert samtykke der det kreves.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Kan systemet integreres med programmene jeg allerede bruker?
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Som regel ja. Vi jobber med de fleste vanlige verktøy: Google Workspace, Outlook, Tripletex, Visma, HubSpot, Pipedrive, Calendly, Booking.com og mange flere. Fortell oss hva du bruker i dag, og vi avklarer dette under strategisamtalen.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Hvor lang tid tar det fra vi starter til systemet er live?
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>For standard løsninger: 3–5 virkedager etter signert avtale og mottatt tilgang til dine systemer. Mer komplekse skreddersydde løsninger kan ta 1–2 uker. Vi gir alltid en klar tidsplan på forhånd.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon">⚡</span>
+            <span>NorwegianAI<span class="logo-accent">Pro</span></span>
+          </a>
+          <p>Vi automatiserer norske småbedrifter med AI — raskt, trygt og på norsk.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <strong>Tjenester</strong>
+            <a href="#tjenester">AI-resepsjonist</a>
+            <a href="#tjenester">Tilbudsgenerering</a>
+            <a href="#tjenester">Lead-chatbot</a>
+            <a href="#tjenester">E-post-automatisering</a>
+          </div>
+          <div class="footer-col">
+            <strong>Selskapet</strong>
+            <a href="#prosess">Prosess</a>
+            <a href="#resultater">Resultater</a>
+            <a href="#priser">Priser</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+          <div class="footer-col">
+            <strong>Ressurser</strong>
+            <a href="#">Personvernerklæring</a>
+            <a href="#">Vilkår for bruk</a>
+            <a href="#">Behandleravtale (GDPR)</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NorwegianAI Pro. Org.nr. registrert i Norge.</p>
+        <p>Bygget med n8n · OpenAI · Make.com · ❤️ i Norge</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
