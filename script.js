@@ -39,21 +39,42 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   });
 });
 
-// Contact form
+// Contact form — Formspree
+// 1. Gå til https://formspree.io og opprett et gratis skjema
+// 2. Bytt ut FORMSPREE_FORM_ID nedenfor med din ID (f.eks. xabcdefg)
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/FORMSPREE_FORM_ID';
+
 const form        = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = form.querySelector('button[type="submit"]');
   btn.disabled = true;
   btn.textContent = 'Sender...';
 
-  // Simulate async submission (replace with fetch() to your backend/form endpoint)
-  setTimeout(() => {
-    form.style.display = 'none';
-    formSuccess.style.display = 'block';
-  }, 900);
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form),
+    });
+
+    if (res.ok) {
+      form.style.display = 'none';
+      formSuccess.style.display = 'block';
+    } else {
+      const data = await res.json();
+      const msg = data?.errors?.map(err => err.message).join(', ') || 'Noe gikk galt.';
+      alert(`Feil: ${msg}`);
+      btn.disabled = false;
+      btn.textContent = 'Book gratis strategisamtale';
+    }
+  } catch {
+    alert('Kunne ikke sende skjemaet. Sjekk internettforbindelsen og prøv igjen.');
+    btn.disabled = false;
+    btn.textContent = 'Book gratis strategisamtale';
+  }
 });
 
 // Scroll-triggered fade-in
