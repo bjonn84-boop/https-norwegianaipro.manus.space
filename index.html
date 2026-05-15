@@ -532,19 +532,22 @@
           <form class="contact-form" id="contactForm">
             <div class="form-group">
               <label for="name">Ditt navn</label>
-              <input type="text" id="name" name="name" placeholder="Ola Nordmann" required />
+              <input type="text" id="name" name="name" placeholder="Ola Nordmann" required data-fs-field />
+              <span data-fs-error="name" class="field-error"></span>
             </div>
             <div class="form-group">
               <label for="business">Bedriftsnavn</label>
-              <input type="text" id="business" name="business" placeholder="Nordmann AS" required />
+              <input type="text" id="business" name="business" placeholder="Nordmann AS" required data-fs-field />
+              <span data-fs-error="business" class="field-error"></span>
             </div>
             <div class="form-group">
               <label for="email">E-post</label>
-              <input type="email" id="email" name="email" placeholder="ola@nordmann.no" required />
+              <input type="email" id="email" name="email" placeholder="ola@nordmann.no" required data-fs-field />
+              <span data-fs-error="email" class="field-error"></span>
             </div>
             <div class="form-group">
               <label for="industry">Bransje</label>
-              <select id="industry" name="industry" required>
+              <select id="industry" name="industry" required data-fs-field>
                 <option value="">Velg bransje...</option>
                 <option>Tannlege / helsetjenester</option>
                 <option>Elektriker / VVS / håndverk</option>
@@ -555,22 +558,30 @@
                 <option>Rådgivning / konsulting</option>
                 <option>Annet</option>
               </select>
+              <span data-fs-error="industry" class="field-error"></span>
             </div>
             <div class="form-group">
               <label for="challenge">Hva er din største tidstjuv i dag?</label>
-              <textarea id="challenge" name="challenge" rows="3" placeholder="F.eks. «Svar på henvendelser tar 2 timer daglig»"></textarea>
+              <textarea id="challenge" name="challenge" rows="3" placeholder="F.eks. «Svar på henvendelser tar 2 timer daglig»" data-fs-field></textarea>
+              <span data-fs-error="challenge" class="field-error"></span>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">
+            <div data-fs-error class="form-error"></div>
+            <button type="submit" class="btn btn-primary btn-full" data-fs-submit-btn>
               Book gratis strategisamtale
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
             <p class="form-disclaimer">Ingen spam. Ingen forpliktelser. Vi svarer innen 24 timer.</p>
           </form>
-          <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="form-success" data-fs-success>
             <div class="success-icon">✅</div>
             <h3>Takk for henvendelsen!</h3>
             <p>Vi tar kontakt innen 24 timer for å avtale et tidspunkt som passer deg.</p>
           </div>
+          <script>
+            window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+            formspree('initForm', { formElement: '#contactForm', formId: 'mqenrddo' });
+          </script>
+          <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
         </div>
       </div>
     </div>

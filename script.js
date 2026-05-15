@@ -39,41 +39,6 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   });
 });
 
-// Contact form — Formspree
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqenrddo';
-
-const form        = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.textContent = 'Sender...';
-
-  try {
-    const res = await fetch(FORMSPREE_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form),
-    });
-
-    if (res.ok) {
-      form.style.display = 'none';
-      formSuccess.style.display = 'block';
-    } else {
-      const data = await res.json();
-      const msg = data?.errors?.map(err => err.message).join(', ') || 'Noe gikk galt.';
-      alert(`Feil: ${msg}`);
-      btn.disabled = false;
-      btn.textContent = 'Book gratis strategisamtale';
-    }
-  } catch {
-    alert('Kunne ikke sende skjemaet. Sjekk internettforbindelsen og prøv igjen.');
-    btn.disabled = false;
-    btn.textContent = 'Book gratis strategisamtale';
-  }
-});
 
 // Scroll-triggered fade-in
 const observer = new IntersectionObserver((entries) => {

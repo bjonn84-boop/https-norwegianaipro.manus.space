@@ -843,6 +843,28 @@ blockquote {
   margin-top: 12px;
 }
 
+.field-error {
+  display: block;
+  font-size: .78rem;
+  color: var(--red);
+  min-height: 1em;
+}
+
+.form-error {
+  font-size: .85rem;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(239,68,68,.12);
+}
+
+.form-success { display: none; }
+
 .form-success {
   background: var(--white);
   padding: 48px 40px;
