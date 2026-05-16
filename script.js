@@ -65,3 +65,87 @@ style.textContent = `
   .fade-target.visible { opacity: 1; transform: none; }
 `;
 document.head.appendChild(style);
+
+// ── AI Chat Widget ──────────────────────────────────────────────
+// Bytt ut med din n8n webhook-URL når du har satt opp workflowen
+const N8N_WEBHOOK = 'N8N_WEBHOOK_URL';
+
+const chatToggle  = document.getElementById('chat-toggle');
+const chatBox     = document.getElementById('chat-box');
+const chatInput   = document.getElementById('chat-input');
+const chatSend    = document.getElementById('chat-send');
+const chatMsgs    = document.getElementById('chat-messages');
+const iconOpen    = document.getElementById('chat-icon-open');
+const iconClose   = document.getElementById('chat-icon-close');
+const chatBadge   = document.getElementById('chat-badge');
+
+let chatOpen = false;
+let badgeShown = false;
+
+// Show badge after 8s to grab attention
+setTimeout(() => {
+  if (!chatOpen && !badgeShown) {
+    chatBadge.textContent = '1';
+    chatBadge.style.display = 'flex';
+    badgeShown = true;
+  }
+}, 8000);
+
+chatToggle.addEventListener('click', () => {
+  chatOpen = !chatOpen;
+  chatBox.classList.toggle('chat-box--open', chatOpen);
+  iconOpen.style.display  = chatOpen ? 'none'  : 'block';
+  iconClose.style.display = chatOpen ? 'block' : 'none';
+  chatBadge.style.display = 'none';
+  if (chatOpen) chatInput.focus();
+});
+
+function appendMsg(text, role) {
+  const div = document.createElement('div');
+  div.className = `chat-msg chat-msg--${role}`;
+  div.innerHTML = text.replace(/\n/g, '<br/>');
+  chatMsgs.appendChild(div);
+  chatMsgs.scrollTop = chatMsgs.scrollHeight;
+  return div;
+}
+
+function appendTyping() {
+  const div = document.createElement('div');
+  div.className = 'chat-msg chat-msg--bot chat-typing';
+  div.innerHTML = '<span></span><span></span><span></span>';
+  chatMsgs.appendChild(div);
+  chatMsgs.scrollTop = chatMsgs.scrollHeight;
+  return div;
+}
+
+async function sendMessage() {
+  const text = chatInput.value.trim();
+  if (!text) return;
+  chatInput.value = '';
+  chatSend.disabled = true;
+
+  appendMsg(text, 'user');
+  const typing = appendTyping();
+
+  try {
+    const res = await fetch(N8N_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text }),
+    });
+    const data = await res.json();
+    typing.remove();
+    appendMsg(data.reply || data.message || data.output || 'Takk for meldingen! Vi tar kontakt snart.', 'bot');
+  } catch {
+    typing.remove();
+    appendMsg('Beklager, noe gikk galt. Ring oss eller send e-post til hei@norwegianaipro.no', 'bot');
+  }
+
+  chatSend.disabled = false;
+  chatInput.focus();
+}
+
+chatSend.addEventListener('click', sendMessage);
+chatInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+});
