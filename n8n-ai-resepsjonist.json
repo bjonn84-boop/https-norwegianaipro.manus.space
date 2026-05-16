@@ -1,0 +1,81 @@
+{
+  "name": "AI Resepsjonist – NorwegianAI Pro",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ai-resepsjonist",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Motta melding fra chat",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "messages": {
+          "values": [
+            {
+              "role": "system",
+              "content": "Du er en vennlig og profesjonell AI-resepsjonist for NorwegianAI Pro. Vi hjelper norske småbedrifter med AI-automatisering.\n\nDine oppgaver:\n- Svar alltid på norsk\n- Hjelp besøkende med spørsmål om tjenestene våre\n- Oppmuntre dem til å booke en gratis strategisamtale\n- Hold svarene korte (maks 3 setninger)\n- Vær varm og profesjonell\n\nVi tilbyr: AI-resepsjonist, automatisk tilbudsgenerering, lead-chatbot, e-postautomatisering. Priser fra 15 000 kr. Gratis strategisamtale på: https://cal.com/bjørn-milliam-pedersen-jvalby/strategisamtale"
+            },
+            {
+              "role": "user",
+              "content": "={{ $json.body.message }}"
+            }
+          ]
+        },
+        "options": {
+          "maxTokens": 300,
+          "temperature": 0.7
+        }
+      },
+      "id": "openai-node",
+      "name": "OpenAI – Generer svar",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.4,
+      "position": [460, 300],
+      "credentials": {
+        "openAiApi": {
+          "name": "OpenAI API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ reply: $json.message.content }) }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "https://norwegianai.pro"
+              }
+            ]
+          }
+        }
+      },
+      "id": "respond-node",
+      "name": "Send svar tilbake",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [680, 300]
+    }
+  ],
+  "connections": {
+    "Motta melding fra chat": {
+      "main": [[{ "node": "OpenAI – Generer svar", "type": "main", "index": 0 }]]
+    },
+    "OpenAI – Generer svar": {
+      "main": [[{ "node": "Send svar tilbake", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
