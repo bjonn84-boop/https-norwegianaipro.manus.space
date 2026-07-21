@@ -16,7 +16,7 @@ navToggle.addEventListener('click', () => {
   document.body.style.overflow = open ? 'hidden' : '';
 });
 
-navLinks.querySelectorAll('a').forEach(link => {
+navLinks.querySelectorAll('a, button').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');

@@ -84,7 +84,9 @@ p  { color: var(--text-muted); }
   border-radius: var(--radius);
   font-weight: 600;
   font-size: .95rem;
+  font-family: inherit;
   text-decoration: none;
+  background: transparent;
   border: 2px solid transparent;
   cursor: pointer;
   transition: all var(--transition);
@@ -1167,22 +1169,31 @@ blockquote {
    RESPONSIVE
    ============================================= */
 @media (max-width: 900px) {
+  /* Absolute dropdown under the bar — position:fixed would be trapped by the
+     nav's backdrop-filter (it becomes the containing block) and lose its bg */
   .nav-links {
     display: none;
-    position: fixed;
-    inset: 0;
-    top: 64px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     background: var(--white);
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 48px 24px;
-    gap: 24px;
-    z-index: 99;
+    padding: 24px;
+    gap: 20px;
+    box-shadow: 0 16px 40px rgba(0,0,0,.18);
+    border-bottom: 1px solid var(--gray-200);
   }
+  .nav { background: var(--white); box-shadow: var(--shadow-sm); }
+  .nav .logo, .nav.scrolled .logo { color: var(--text); }
+  .nav .logo-accent { color: var(--blue-500); }
+  .nav .nav-toggle span { background: var(--text); }
   .nav-links.open { display: flex; }
-  .nav-links a { color: var(--text); font-size: 1.1rem; }
-  .nav-links .btn { color: var(--white); }
+  .nav-links a { color: var(--text); font-size: 1.05rem; }
+  .nav.scrolled .nav-links a { color: var(--text); }
+  .nav-links .btn-primary,
+  .nav.scrolled .nav-links .btn-primary { color: var(--white); }
   .nav-toggle { display: flex; }
 
   .contact-wrapper {
