@@ -140,6 +140,24 @@ p  { color: var(--text-muted); }
 }
 
 /* =============================================
+   LEGAL PAGES
+   ============================================= */
+.legal-page .nav { position: sticky; }
+
+.legal {
+  max-width: 720px;
+  padding-top: 48px;
+  padding-bottom: 96px;
+}
+.legal h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 8px; }
+.legal-updated { font-size: .85rem; color: var(--gray-400); margin-bottom: 32px; }
+.legal h2 { font-size: 1.25rem; margin: 36px 0 12px; }
+.legal h3 { font-size: 1.02rem; margin: 20px 0 8px; color: var(--text); }
+.legal p { margin-bottom: 12px; line-height: 1.75; }
+.legal ul { margin: 0 0 12px 24px; color: var(--text-muted); line-height: 1.75; }
+.legal a { color: var(--blue-500); }
+
+/* =============================================
    CHAT WIDGET
    ============================================= */
 #chat-widget {
