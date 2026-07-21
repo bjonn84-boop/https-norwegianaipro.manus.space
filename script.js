@@ -67,8 +67,8 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ── AI Chat Widget ──────────────────────────────────────────────
-// Bytt ut med din n8n webhook-URL når du har satt opp workflowen
-const N8N_WEBHOOK = 'N8N_WEBHOOK_URL';
+// Chat-svar genereres av Netlify Function (netlify/functions/chat.js)
+const CHAT_ENDPOINT = '/.netlify/functions/chat';
 
 const chatToggle  = document.getElementById('chat-toggle');
 const chatBox     = document.getElementById('chat-box');
@@ -128,7 +128,7 @@ async function sendMessage() {
   const typing = appendTyping();
 
   try {
-    const res = await fetch(N8N_WEBHOOK, {
+    const res = await fetch(CHAT_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: text }),
