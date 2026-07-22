@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://norwegianai.pro/sitemap.xml
